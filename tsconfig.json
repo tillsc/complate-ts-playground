@@ -12,6 +12,7 @@
     "files": [
         "index.ts",
         "comp.tsx",
+        "comp_broken.tsx",
         "react.ts",
         "stream.ts"
     ]

@@ -4,9 +4,9 @@ declare type elementGenerator = (
   callback: () => void
 ) => void;
 
-declare function createElement(
-  element: string | ((params) => elementGenerator),
-  params: Object,
+declare function createElement<T>(
+  element: string | ((params: T) => elementGenerator),
+  params: T,
   ...children
 ): elementGenerator;
 
