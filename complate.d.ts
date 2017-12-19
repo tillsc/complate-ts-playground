@@ -1,7 +1,11 @@
-declare type elementGenerator = Function;
+declare type elementGenerator = (
+  stream: Renderer.Stream,
+  nonBlocking: boolean,
+  callback: () => void
+) => void;
 
 declare function createElement(
-  element: string | Function,
+  element: string | ((params) => elementGenerator),
   params: Object,
   ...children
 ): elementGenerator;
