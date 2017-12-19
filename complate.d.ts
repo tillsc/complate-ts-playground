@@ -4,8 +4,12 @@ declare type elementGenerator = (
   callback: () => void
 ) => void;
 
+interface StatelessFunctionalComponent<P> {
+  (props: P): elementGenerator;
+}
+
 declare function createElement<T>(
-  element: string | ((params: T) => elementGenerator),
+  element: string | StatelessFunctionalComponent<T>,
   params: T,
   ...children
 ): elementGenerator;
@@ -13,34 +17,40 @@ declare function createElement<T>(
 declare function safe(str: string): Renderer.HTMLString;
 
 declare class Renderer {
-    constructor(doctype?: string);
+  constructor(doctype?: string);
 
-    renderView(
-      view: elementGenerator | string,
-      params: Object,
-      stream: Renderer.Stream,
-      { fragment: boolean }?,
-      callback?: () => void
-    ): void;
+  renderView(
+    view: elementGenerator | string,
+    params: Object,
+    stream: Renderer.Stream,
+    { fragment: boolean }?,
+    callback?: () => void
+  ): void;
 
-    registerView(
-      macro: () => elementGenerator,
-      name?: string,
-      replace?: boolean
-    ): string;
+  registerView(
+    macro: () => elementGenerator,
+    name?: string,
+    replace?: boolean
+  ): string;
 }
 
 declare namespace Renderer {
-    export interface Stream {
-      write(msg: string): void;
-      writeln(msg: string): void;
-      flush(): void;
-    }
-    export class HTMLString {
-
-     }
+  export interface Stream {
+    write(msg: string): void;
+    writeln(msg: string): void;
+    flush(): void;
   }
+  export class HTMLString {
+
+  }
+}
 
 export default Renderer;
 
 export { createElement, safe };
+
+declare global {
+  namespace JSX {
+    interface Element extends StatelessFunctionalComponent<any> { }
+  }
+}
