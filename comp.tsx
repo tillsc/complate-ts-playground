@@ -1,5 +1,4 @@
-import React from "./react";
-import { safe } from "./complate";
+import * as complate from "./complate";
 
 export default () => {
   return <html>
@@ -9,4 +8,4 @@ export default () => {
   </html>
 }
 
-let MyComponent =  ({ header, content }: { header: string, content: string }) => <div><h1>{header}</h1><p>{safe(content)}</p></div>;
+let MyComponent =  ({ header, content }: { header: string, content: string }) => <div><h1>{header}</h1><p>{complate.safe(content)}</p></div>;

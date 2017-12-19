@@ -49,8 +49,10 @@ export default Renderer;
 
 export { createElement, safe };
 
+// Global definitions
 declare global {
   namespace JSX {
+    // This is needed for attribute type checking in custom components
     interface Element extends StatelessFunctionalComponent<any> { }
   }
 }
