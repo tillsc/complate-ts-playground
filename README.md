@@ -1,20 +1,15 @@
 ## Usage
 
-Install typescript and rollup
-
-    npm install rollup typescript -g
-
-Load and build complate
-
     npm install
-    rollup -c
 
 Compile
 
-    tsc
+    npm run compile
+
+Watch
+
+    npm run watch
 
 Run
 
-    node dist/index.js
-
-
+    node app.js

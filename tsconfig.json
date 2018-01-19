@@ -1,18 +1,12 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
+        "module": "es6",
+        "moduleResolution": "node",
         "jsx": "react",
         "reactNamespace": "complate",
-        "outDir": "dist"
+        "outDir": "ts-dist"
     },
-    "include": [
-        "node_modules/complate-steam"
-    ],
-    "exclude": [
-    ],
     "files": [
-        "index.ts",
-        "comp.tsx",
-        "stream.ts"
+        "index.ts"
     ]
 }
