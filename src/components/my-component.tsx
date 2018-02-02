@@ -15,7 +15,14 @@ let MyComponent = (params: MyCompontentInterface) => {
     <h3>
       { (typeof params.header === "string") ? params.header : [params.header.main, <small>{params.header.sub}</small>] }
     </h3>
-    {params.contents.map(content => <p>{complate.safe(content)}</p>)}
+    <dl>
+      {params.contents.map(content => {
+      return <>
+        <dd>{complate.safe(content)}</dd>
+        <dt>{content.length}</dt>
+        </>;
+      })}
+    </dl>
   </div>;
 }
 
