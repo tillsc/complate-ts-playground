@@ -13,7 +13,7 @@ let main = () => {
 
       <MyComponent header="Simple title" contents={[]} />
 
-      <MyComponent header={{main: "Some title", sub: "Some more title"}} contents={contents} />
+      <MyComponent header={{ main: "Some title", sub: "Some more title" }} contents={contents} />
     </body>
   </html>
 }

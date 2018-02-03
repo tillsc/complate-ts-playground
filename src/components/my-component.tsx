@@ -13,13 +13,13 @@ interface MyCompontentInterface {
 let MyComponent = (params: MyCompontentInterface) => {
   return <div>
     <h3>
-      { (typeof params.header === "string") ? params.header : [params.header.main, <small>{params.header.sub}</small>] }
+      {(typeof params.header === "string") ? params.header : [params.header.main, <small>{params.header.sub}</small>]}
     </h3>
     <dl>
       {params.contents.map(content => {
-      return <>
-        <dd>{complate.safe(content)}</dd>
-        <dt>{content.length}</dt>
+        return <>
+          <dd>{complate.safe(content)}</dd>
+          <dt>{content.length}</dt>
         </>;
       })}
     </dl>
