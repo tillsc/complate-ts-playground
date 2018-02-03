@@ -1,10 +1,7 @@
 module.exports = {
-  js: {
-    bundles: [{
-      entryPoint: "./ts-dist/index.js",
-      target: "./app.js"
-    }],
-    manifest: false
-  },
+  js: [{
+    source: "./ts-dist/index.js",
+    target: "./app.js"
+  }],
   watchDirs: ["./ts-dist"]
 };
