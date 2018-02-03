@@ -1,7 +1,8 @@
 module.exports = {
   js: [{
-    source: "./ts-dist/index.js",
-    target: "./app.js"
+    source: "./src/index.ts",
+    target: "./app.js",
+    typescript: {}
   }],
-  watchDirs: ["./ts-dist"]
+  watchDirs: ["./src"]
 };
