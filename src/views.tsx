@@ -2,6 +2,7 @@ import * as complate from "complate-stream";
 
 import SimpleComponent from "./components/simple-component"
 import MyComponent from "./components/my-component"
+import PlainJsComponent from "./components/plain-js-component"
 
 export { main }
 
@@ -14,6 +15,8 @@ let main = () => {
       <MyComponent header="Simple title" contents={[]} />
 
       <MyComponent header={{ main: "Some title", sub: "Some more title" }} contents={contents} />
+
+      <PlainJsComponent foo="Hello From" bar="JavaScript" />
     </body>
   </html>
 }
