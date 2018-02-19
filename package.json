@@ -8,7 +8,7 @@
     "faucet-pipeline-typescript": "^1.0.0-beta.1"
   },
   "scripts": {
-    "watch": "./node_modules/faucet-pipeline-typescript/node_modules/.bin/faucet --no-fingerprint --watch",
-    "compile": "./node_modules/faucet-pipeline-typescript/node_modules/.bin/faucet --no-fingerprint"
+    "watch": "faucet --no-fingerprint --watch",
+    "compile": "faucet --no-fingerprint"
   }
 }
