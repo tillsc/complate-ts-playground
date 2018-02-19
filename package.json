@@ -3,15 +3,12 @@
   "description": "complate with TypeScript demo project",
   "version": "0.0.1",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "complate-stream": "complate/complate-stream#typescript",
-    "faucet-pipeline": "1.0.0-beta.0",
-    "faucet-pipeline-js": "tillsc/faucet-pipeline-js#typescript",
-    "rollup-plugin-typescript2": "^0.11.0",
-    "typescript": "^2.7.1"
+    "faucet-pipeline-typescript": "^1.0.0-beta.1"
   },
   "scripts": {
-    "watch": "./node_modules/.bin/faucet --no-fingerprint --watch",
-    "compile": "./node_modules/.bin/faucet --no-fingerprint"
+    "watch": "./node_modules/faucet-pipeline-typescript/node_modules/.bin/faucet --no-fingerprint --watch",
+    "compile": "./node_modules/faucet-pipeline-typescript/node_modules/.bin/faucet --no-fingerprint"
   }
 }
